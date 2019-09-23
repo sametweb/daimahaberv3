@@ -155,8 +155,7 @@ a {
   font-size: 1.6rem;
 }
 header .top-bar,
-header .logo-block,
-header .main-navbar {
+header .logo-block {
   width: 100%;
   display: flex;
 }
@@ -174,16 +173,66 @@ header .logo-block-right {
   display: none;
 }
 
-header .main-navbar ul {
+header .main-navbar {
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+header .main-navbar input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+header .main-navbar span {
+  display: block;
+  width: 30px;
+  height: 5px;
+  margin-bottom: 4px;
+  position: relative;
+  background: #000;
+  border-radius: 2px;
+  z-index: 1;
+}
+
+header .main-navbar .menu {
   display: flex;
   flex-direction: column;
   width: 100%;
+  overflow: hidden;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  display: none;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  position: absolute;
 }
 
-header .main-navbar ul li {
-  padding: 1rem 0;
+header .main-navbar input:checked ~ .menu {
+  display: block;
+}
+
+header .main-navbar .menu li {
+  padding: 1.5rem 0;
   width: 100%;
   text-align: center;
+  border-bottom: 1px solid #444;
+}
+
+header .main-navbar .menu li:last-child {
+  border: 0;
+}
+
+header .main-navbar .menu li a {
+  color: #fff;
 }
 
 .headline {
