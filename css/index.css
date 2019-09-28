@@ -122,17 +122,13 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/* End of CSS Reset */
-
 * {
   box-sizing: border-box;
 }
-
 html {
   font-size: 62.5%;
   font-family: "Open Sans", sans-serif;
 }
-
 h1,
 h2,
 h3,
@@ -142,44 +138,37 @@ h6 {
   font-family: "Open Sans Condensed", sans-serif;
   font-weight: bold;
 }
-
 a {
   text-decoration: none;
   color: #000;
 }
-
 #root {
   background: #ccc;
   width: 100%;
   margin: 0 auto;
   font-size: 1.6rem;
 }
-header .top-bar,
-header .logo-block {
+#root header .top-bar,
+#root header .logo-block {
   width: 100%;
   display: flex;
 }
-
-header .top-bar {
+#root header .top-bar {
   justify-content: space-around;
   padding: 1% 0;
 }
-
-header .logo-block {
+#root header .logo-block {
   justify-content: center;
 }
-
-header .logo-block-right {
+#root header .logo-block-right {
   display: none;
 }
-
-header .main-navbar {
+#root header .main-navbar {
   z-index: 1;
   -webkit-user-select: none;
   user-select: none;
 }
-
-header .main-navbar input {
+#root header .main-navbar input {
   display: block;
   width: 40px;
   height: 32px;
@@ -189,8 +178,10 @@ header .main-navbar input {
   z-index: 2;
   -webkit-touch-callout: none;
 }
-
-header .main-navbar span {
+#root header .main-navbar input:checked ~ .menu {
+  display: block;
+}
+#root header .main-navbar span {
   display: block;
   width: 30px;
   height: 5px;
@@ -200,11 +191,9 @@ header .main-navbar span {
   border-radius: 2px;
   z-index: 1;
 }
-
-header .main-navbar .menu {
+#root header .main-navbar .menu {
   display: flex;
   flex-direction: column;
-  width: 100%;
   overflow: hidden;
   width: 100%;
   -webkit-font-smoothing: antialiased;
@@ -215,26 +204,18 @@ header .main-navbar .menu {
   padding: 20px;
   position: absolute;
 }
-
-header .main-navbar input:checked ~ .menu {
-  display: block;
-}
-
-header .main-navbar .menu li {
+#root header .main-navbar .menu li {
   padding: 1.5rem 0;
   width: 100%;
   text-align: center;
   border-bottom: 1px solid #444;
 }
-
-header .main-navbar .menu li:last-child {
+#root header .main-navbar .menu li:last-child {
   border: 0;
 }
-
-header .main-navbar .menu li a {
+#root header .main-navbar .menu li a {
   color: #fff;
 }
-
 .headline {
   display: flex;
   flex-direction: row;
@@ -255,12 +236,10 @@ header .main-navbar .menu li a {
   scroll-snap-align: start;
   scroll-behavior: smooth;
 }
-
 .headline .item img {
   width: 100%;
 }
-
-.main-slider {
+.slider .main-slider {
   display: flex;
   flex-direction: row;
   overflow: -moz-scrollbars-none;
@@ -270,22 +249,20 @@ header .main-navbar .menu li a {
   scroll-snap-type: x mandatory;
   height: 100%;
 }
-.main-slider::-webkit-scrollbar {
+.slider .main-slider::-webkit-scrollbar {
   width: 0 !important;
 }
-.main-slider .item {
+.slider .main-slider .item {
   flex: 0 0 90%;
   margin-right: 4vw;
   padding: 0 0 2vh 0;
   scroll-snap-align: start;
   scroll-behavior: smooth;
 }
-
-.main-slider .item img {
+.slider .main-slider .item img {
   width: 100%;
 }
-
-.mini-slider {
+.slider .mini-slider {
   display: flex;
   flex-direction: row;
   overflow: -moz-scrollbars-none;
@@ -295,17 +272,16 @@ header .main-navbar .menu li a {
   scroll-snap-type: x mandatory;
   height: 100%;
 }
-.mini-slider::-webkit-scrollbar {
+.slider .mini-slider::-webkit-scrollbar {
   width: 0 !important;
 }
-.mini-slider .item {
+.slider .mini-slider .item {
   flex: 0 0 27%;
   margin-right: 2vw;
   padding: 0 0 2vh 0;
   scroll-snap-align: start;
   scroll-behavior: smooth;
 }
-
-.mini-slider .item img {
+.slider .mini-slider .item img {
   width: 100%;
 }
