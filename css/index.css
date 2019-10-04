@@ -129,12 +129,15 @@ html {
   font-size: 62.5%;
   font-family: "Open Sans", sans-serif;
 }
+body {
+  margin: 0;
+}
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
+s h6 {
   font-family: "Open Sans Condensed", sans-serif;
   font-weight: bold;
 }
@@ -147,6 +150,7 @@ a {
   width: 100%;
   margin: 0 auto;
   font-size: 1.6rem;
+  padding: 8px;
 }
 header .top-bar,
 header .logo-block {
@@ -198,7 +202,7 @@ header .main-navbar .menu {
   width: 100%;
   /* -webkit-font-smoothing: antialiased; */
   display: none;
-  z-index: 2;
+  z-index: 100;
   background: rgba(0, 0, 0, 0.9);
   padding: 20px;
   position: absolute;
@@ -210,8 +214,8 @@ header .main-navbar .menu li {
   text-align: center;
   border-bottom: 1px solid #444;
 }
-header .main-navbar .menu li:last-child {
-  border: 0;
+header .main-navbar .menu li:first-child {
+  border-top: 1px solid #444;
 }
 header .main-navbar .menu li:hover {
   background: rgba(255, 255, 255, 0.1);
@@ -256,14 +260,28 @@ header .main-navbar .menu li a {
   width: 0 !important;
 }
 .slider .main-slider .item {
+  position: relative;
+  display: inline-block;
   flex: 0 0 90%;
   margin-right: 4vw;
-  padding: 0 0 2vh 0;
   scroll-snap-align: start;
   scroll-behavior: smooth;
 }
-.slider .main-slider .item img {
+.slider .main-slider .item .link {
+  display: block;
+}
+.slider .main-slider .item .link img {
   width: 100%;
+}
+.slider .main-slider .item .link h3 {
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+  font-size: 2.5rem;
+  line-height: 5rem;
+  padding: 0 0 0 1vw;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
 }
 .slider .mini-slider {
   display: flex;
@@ -299,7 +317,7 @@ header .main-navbar .menu li a {
 }
 .news .thumb-news {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-wrap: wrap;
   padding: 2vw 0;
   margin-bottom: 5vh;
@@ -308,8 +326,8 @@ header .main-navbar .menu li a {
 .news .thumb-news .item {
   position: relative;
   display: inline-block;
-  width: 47%;
-  margin-bottom: 2vh;
+  width: 49%;
+  margin-bottom: 2vw;
 }
 .news .thumb-news .item .link img {
   width: 100%;
@@ -322,6 +340,7 @@ header .main-navbar .menu li a {
   background: rgba(255, 255, 255, 0.5);
   line-height: 2.5rem;
   font-size: 1.5rem;
+  padding: 0 0 0 0.5vw;
 }
 .news .category-news {
   display: flex;

@@ -36,13 +36,27 @@
       width: 0 !important;
     }
     .item {
+      position: relative;
+      display: inline-block;
       flex: 0 0 90%;
       margin-right: 4vw;
-      padding: 0 0 2vh 0;
       scroll-snap-align: start;
       scroll-behavior: smooth;
-      img {
-        width: 100%;
+      .link {
+        display: block;
+        img {
+          width: 100%;
+        }
+        h3 {
+          position: absolute;
+          bottom: 0;
+          z-index: 10;
+          font-size: 2.5rem;
+          line-height: 5rem;
+          padding: 0 0 0 1vw;
+          width: 100%;
+          background: rgba(255, 255, 255, 0.2);
+        }
       }
     }
   }

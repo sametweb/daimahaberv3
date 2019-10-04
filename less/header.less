@@ -52,7 +52,7 @@ header {
       width: 100%;
       /* -webkit-font-smoothing: antialiased; */
       display: none;
-      z-index: 2;
+      z-index: 100;
       background: rgba(0, 0, 0, 0.9);
       padding: 20px;
       position: absolute;
@@ -62,8 +62,8 @@ header {
         width: 100%;
         text-align: center;
         border-bottom: 1px solid #444;
-        &:last-child {
-          border: 0;
+        &:first-child {
+          border-top: 1px solid #444;
         }
         &:hover {
           background: rgba(255, 255, 255, 0.1);
