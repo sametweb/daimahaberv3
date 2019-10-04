@@ -170,8 +170,8 @@ header .main-navbar {
 }
 header .main-navbar input {
   display: block;
-  width: 40px;
-  height: 32px;
+  width: 4rem;
+  height: 3.2rem;
   position: absolute;
   cursor: pointer;
   opacity: 0;
@@ -290,28 +290,37 @@ header .main-navbar .menu li a {
 }
 .news .title {
   font-size: 3rem;
-  padding: 10px 0 10px 10px;
+  padding: 10px 40px 10px 10px;
   color: #fff;
-  width: 100%;
-  margin-bottom: 2vh;
   background: #950000;
-  background: linear-gradient(180deg, #950000 10%, #950000 60%, #ff4949 100%);
+  background: linear-gradient(180deg, #950000 10%, #950000 35%, #e20000 100%);
+  border-top-right-radius: 20px;
+  display: inline-block;
 }
 .news .thumb-news {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
+  padding: 2vw 0;
   margin-bottom: 5vh;
+  border-top: 5px solid #e20000;
 }
 .news .thumb-news .item {
-  width: 45%;
+  position: relative;
+  display: inline-block;
+  width: 47%;
   margin-bottom: 2vh;
 }
 .news .thumb-news .item .link img {
   width: 100%;
 }
 .news .thumb-news .item .link h3 {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  line-height: 2.5rem;
   font-size: 1.5rem;
 }
 .news .category-news {
