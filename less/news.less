@@ -12,22 +12,69 @@
     );
     border-top-right-radius: 20px;
     display: inline-block;
+    @media @tablet {
+      &::after {
+        content: "\00a0Haberleri";
+      }
+    }
   }
   .thumb-news {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 2vw 0;
-    margin-bottom: 5vh;
+    flex-direction: row;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    height: 100%;
+    padding: 1vh 0 4vh 0;
+    &::-webkit-scrollbar {
+      width: 0 !important;
+    }
+    border-top: 5px solid lighten(@catTitleBgColor, 15%);
+    .item {
+      display: flex;
+      flex: 0 0 80%;
+      margin-right: 1vh;
+      scroll-snap-align: center;
+      scroll-behavior: smooth;
+      .link {
+        display: inline-block;
+        img {
+          width: 100%;
+        }
+        h3 {
+          width: 100%;
+          line-height: 2.5rem;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+  .category-news {
+    display: flex;
+    flex-direction: row;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    height: 100%;
+    padding: 0.5vh 0 4vh 0;
+    &::-webkit-scrollbar {
+      width: 0 !important;
+    }
     border-top: 5px solid lighten(@catTitleBgColor, 15%);
 
     .item {
       position: relative;
       display: inline-block;
-      width: 49%;
-      margin-bottom: 2vw;
-      @media @phone {
-        width: 100%;
+      flex: 0 0 90%;
+      margin-right: 4vw;
+      scroll-snap-align: start;
+      scroll-behavior: smooth;
+      @media @tablet {
+        width: 49%;
       }
       .link {
         img {
@@ -41,38 +88,8 @@
           background: rgba(0, 0, 0, 0.5);
           color: white;
           line-height: 2.5rem;
-          font-size: 1.5rem;
-          padding: 0 0 0 0.5vw;
-        }
-      }
-    }
-  }
-  .category-news {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 2vw 0;
-    margin-bottom: 5vh;
-    border-top: 5px solid lighten(@catTitleBgColor, 15%);
-
-    .item {
-      position: relative;
-      display: inline-block;
-      width: 49%;
-      margin-bottom: 2vw;
-      .link {
-        img {
-          width: 100%;
-        }
-        h3 {
-          position: absolute;
-          z-index: 10;
-          top: 0;
-          width: 100%;
-          background: rgba(255, 255, 255, 0.5);
-          line-height: 2.5rem;
-          font-size: 1.5rem;
-          padding: 0 0 0 0.5vw;
+          font-size: 2rem;
+          padding: 0.5vh 0 0.5vh 1vw;
         }
       }
     }
