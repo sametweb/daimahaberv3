@@ -215,7 +215,6 @@ header .logo-block .burger-menu .menu {
   position: absolute;
   right: 0;
   top: 27px;
-  transition: all 1s ease 0s;
 }
 header .logo-block .burger-menu .menu li {
   padding: 1.5rem 0;
@@ -292,7 +291,8 @@ header .logo-block .burger-menu .menu li a {
   line-height: 5rem;
   padding: 0 0 0 1vw;
   width: 100%;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
 }
 .slider .mini-slider {
   display: flex;
