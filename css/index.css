@@ -253,6 +253,10 @@ header .logo-block .burger-menu .menu li a {
 .headline .item img {
   width: 100%;
 }
+.headline .item h3 {
+  font-weight: normal;
+  line-height: 2rem;
+}
 .slider .main-slider {
   display: flex;
   flex-direction: row;
