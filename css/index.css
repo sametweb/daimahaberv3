@@ -340,6 +340,11 @@ header .logo-block .burger-menu .menu li a {
   width: 49%;
   margin-bottom: 2vw;
 }
+@media (min-width: 400px) {
+  .news .thumb-news .item {
+    width: 100%;
+  }
+}
 .news .thumb-news .item .link img {
   width: 100%;
 }
@@ -348,18 +353,36 @@ header .logo-block .burger-menu .menu li a {
   z-index: 10;
   top: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
   line-height: 2.5rem;
   font-size: 1.5rem;
   padding: 0 0 0 0.5vw;
 }
 .news .category-news {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
+  padding: 2vw 0;
+  margin-bottom: 5vh;
+  border-top: 5px solid #e20000;
+}
+.news .category-news .item {
+  position: relative;
+  display: inline-block;
+  width: 49%;
+  margin-bottom: 2vw;
 }
 .news .category-news .item .link img {
-  width: 50%;
+  width: 100%;
 }
 .news .category-news .item .link h3 {
-  font-size: 2.5rem;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  line-height: 2.5rem;
+  font-size: 1.5rem;
+  padding: 0 0 0 0.5vw;
 }
