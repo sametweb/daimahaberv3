@@ -339,7 +339,7 @@ header .logo-block .burger-menu .menu li a {
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: x mandatory;
   height: 100%;
-  padding: 1vh 0 4vh 0;
+  padding: 1.5vh 0 4vh 0;
   border-top: 5px solid #e20000;
 }
 .news .thumb-news::-webkit-scrollbar {
@@ -348,7 +348,7 @@ header .logo-block .burger-menu .menu li a {
 .news .thumb-news .item {
   display: flex;
   flex: 0 0 80%;
-  margin-right: 1vh;
+  margin-right: 1.5vh;
   scroll-snap-align: center;
   scroll-behavior: smooth;
 }
