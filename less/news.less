@@ -1,15 +1,9 @@
 .news {
   .title {
     font-size: 3rem;
-    padding: 10px 40px 10px 10px;
-    color: #fff;
-    background: @catTitleBgColor;
-    background: linear-gradient(
-      180deg,
-      @catTitleBgColor 10%,
-      saturate(@catTitleBgColor, 10%) 35%,
-      lighten(@catTitleBgColor, 15%) 100%
-    );
+    padding: 10px 40px 10px 0;
+    color: @dark;
+    font-weight: bold;
     border-top-right-radius: 20px;
     display: inline-block;
     @media @tablet {
@@ -31,7 +25,7 @@
     &::-webkit-scrollbar {
       width: 0 !important;
     }
-    border-top: 5px solid lighten(@catTitleBgColor, 15%);
+    border-top: 5px solid lighten(@main, 15%);
     .item {
       display: flex;
       flex: 0 0 80%;
@@ -47,6 +41,7 @@
           width: 100%;
           line-height: 2.5rem;
           font-size: 2rem;
+          font-weight: bold;
         }
       }
     }
@@ -60,36 +55,27 @@
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
     height: 100%;
-    padding: 0.5vh 0 4vh 0;
+    padding: 1.5vh 0 4vh 0;
     &::-webkit-scrollbar {
       width: 0 !important;
     }
-    border-top: 5px solid lighten(@catTitleBgColor, 15%);
-
+    border-top: 5px solid lighten(@main, 15%);
     .item {
-      position: relative;
-      display: inline-block;
-      flex: 0 0 90%;
-      margin-right: 4vw;
-      scroll-snap-align: start;
+      display: flex;
+      flex: 0 0 80%;
+      margin-right: 1.5vh;
+      scroll-snap-align: center;
       scroll-behavior: smooth;
-      @media @tablet {
-        width: 49%;
-      }
       .link {
+        display: inline-block;
         img {
           width: 100%;
         }
         h3 {
-          position: absolute;
-          z-index: 10;
-          top: 0;
           width: 100%;
-          background: rgba(0, 0, 0, 0.5);
-          color: white;
           line-height: 2.5rem;
           font-size: 2rem;
-          padding: 0.5vh 0 0.5vh 1vw;
+          font-weight: bold;
         }
       }
     }

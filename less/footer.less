@@ -1,0 +1,21 @@
+footer {
+  .flex();
+  flex-wrap: wrap;
+  background: @dark;
+  .link-block {
+    width: 100%;
+    padding: 10px 0 20px 0;
+    .link {
+      color: @light;
+      display: block;
+      text-align: center;
+      line-height: 2.2rem;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    @media @tablet {
+      width: 33%;
+    }
+  }
+}
