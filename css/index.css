@@ -280,6 +280,7 @@ footer .link-block .link:hover {
   width: 100%;
 }
 .headline .item h3 {
+  font-size: 1.7rem;
   font-weight: normal;
   line-height: 2rem;
 }
