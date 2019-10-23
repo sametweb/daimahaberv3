@@ -305,7 +305,8 @@ footer .link-block .link:hover {
   }
 }
 @keyframes scroller {
-  0% {
+  0%,
+  100% {
     transform: translateX(0);
   }
   9% {
@@ -364,9 +365,6 @@ footer .link-block .link:hover {
   }
   99% {
     transform: translateX(-900%);
-  }
-  100% {
-    transform: translateX(0);
   }
 }
 .headline {
@@ -451,12 +449,12 @@ footer .link-block .link:hover {
   margin-right: 2rem;
   scroll-snap-align: center;
   scroll-behavior: smooth;
+  animation: scroller 30s infinite;
 }
 @media (min-width: 768px) {
   .slider .main-slider .item {
     flex: 0 0 100%;
     margin: 0 0 0 0;
-    animation: scroller 30s infinite;
   }
 }
 .slider .main-slider .item .link {

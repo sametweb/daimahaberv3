@@ -1,5 +1,6 @@
 @keyframes scroller {
-  0% {
+  0%,
+  100% {
     transform: translateX(0);
   }
   9% {
@@ -58,9 +59,6 @@
   }
   99% {
     transform: translateX(-900%);
-  }
-  100% {
-    transform: translateX(0);
   }
 }
 
@@ -128,10 +126,10 @@
       margin-right: 2rem;
       scroll-snap-align: center;
       scroll-behavior: smooth;
+      animation: scroller 30s infinite;
       @media @desktop {
         flex: 0 0 100%;
         margin: 0 0 0 0;
-        animation: scroller 30s infinite;
       }
       .link {
         display: block;
