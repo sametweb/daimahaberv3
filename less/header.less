@@ -1,23 +1,29 @@
 header {
-  .top-bar,
-  .logo-block {
+  .top-bar {
     width: 100%;
     display: flex;
-  }
-
-  .top-bar {
     justify-content: space-around;
     padding: 1% 0;
   }
 
   .logo-block {
-    align-items: center;
+    width: 100%;
+    display: flex;
     height: 100px;
+    align-items: center;
     img {
       position: absolute;
+      @media @desktop {
+        position: static;
+        margin: 0 1rem 0 0;
+      }
     }
     .logo-block-right {
       display: none;
+      @media @desktop {
+        display: block;
+        width: 100%;
+      }
     }
     .burger-menu {
       display: flex;
@@ -26,6 +32,9 @@ header {
       flex-wrap: wrap;
       position: relative;
       width: 100%;
+      @media @desktop {
+        display: none;
+      }
       input {
         display: inline-block;
         width: 4rem;
@@ -35,6 +44,9 @@ header {
         opacity: 0;
         z-index: 2;
         -webkit-touch-callout: none;
+        @media @desktop {
+          display: none;
+        }
         &:checked ~ .menu {
           display: block;
         }
@@ -48,6 +60,9 @@ header {
         background: @dark;
         border-radius: 2px;
         z-index: 1;
+        @media @desktop {
+          display: none;
+        }
       }
 
       .menu {
@@ -55,19 +70,20 @@ header {
         flex-direction: column;
         width: 100%;
         overflow: hidden;
-        width: 100%;
         display: none;
         z-index: 100;
-        background: rgba(0, 0, 0, 0.9);
+        background: fade(black, 95%);
         padding: 20px;
         position: absolute;
         right: 0;
         top: 27px;
+
         li {
           padding: 1.5rem 0;
           width: 100%;
           text-align: center;
           border-bottom: 1px solid @dark;
+
           &:first-child {
             border-top: 1px solid @dark;
           }
@@ -76,6 +92,26 @@ header {
           }
           a {
             color: @light;
+          }
+        }
+      }
+    }
+  }
+  .main-navbar {
+    display: none;
+    @media @desktop {
+      display: block;
+      .menu {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background: @main;
+        margin: 0 0 1rem 0;
+        li {
+          padding: 15px 0;
+          a {
+            color: @light;
+            text-shadow: @dark 1px 1px 0;
           }
         }
       }

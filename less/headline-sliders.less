@@ -7,15 +7,22 @@
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: x mandatory;
   height: 100%;
+  @media @desktop {
+    justify-content: space-between;
+  }
   &::-webkit-scrollbar {
     width: 0 !important;
   }
   .item {
     flex: 0 0 40%;
-    margin-right: 3vw;
+    margin-right: 2.5rem;
     padding: 0 0 2vh 0;
     scroll-snap-align: start;
     scroll-behavior: smooth;
+    @media @desktop {
+      flex: 0 0 19%;
+      margin: 0;
+    }
     img {
       width: 100%;
     }
@@ -23,11 +30,18 @@
       font-size: 1.7rem;
       font-weight: normal;
       line-height: 2rem;
+      @media @tablet {
+        font-size: 2rem;
+      }
     }
   }
 }
 
 .slider {
+  @media @desktop {
+    display: flex;
+    justify-content: space-between;
+  }
   .main-slider {
     display: flex;
     flex-direction: row;
@@ -37,7 +51,10 @@
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
     height: 100%;
-    padding: 0 0 4vh 0;
+    padding: 0 0 3rem 0;
+    @media @desktop {
+      width: 60%;
+    }
     &::-webkit-scrollbar {
       width: 0 !important;
     }
@@ -45,9 +62,13 @@
       position: relative;
       display: inline-block;
       flex: 0 0 85%;
-      margin-right: 4vw;
+      margin-right: 4rem;
       scroll-snap-align: center;
       scroll-behavior: smooth;
+      @media @desktop {
+        flex: 0 0 100%;
+        margin: 0 10px 0 0;
+      }
       .link {
         display: block;
         overflow: hidden;
@@ -80,15 +101,29 @@
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
     height: 100%;
+    @media @desktop {
+      width: 38%;
+    }
     &::-webkit-scrollbar {
       width: 0 !important;
     }
     .item {
       flex: 0 0 40%;
-      margin-right: 3vw;
-      padding: 0 0 2vh 0;
+      margin-right: 3rem;
+      padding: 0 0 2rem 0;
       scroll-snap-align: start;
       scroll-behavior: smooth;
+      @media @desktop {
+        flex: 0 0 100%;
+        margin: 0 1rem 0 0;
+      }
+      .link {
+        h3 {
+          @media @tablet {
+            font-size: 2rem;
+          }
+        }
+      }
       img {
         width: 100%;
       }
