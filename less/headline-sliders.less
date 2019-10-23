@@ -1,6 +1,5 @@
 .headline {
-  display: flex;
-  flex-direction: row;
+  .flex();
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;
   overflow-y: hidden;
@@ -15,8 +14,8 @@
   }
   .item {
     flex: 0 0 40%;
-    margin-right: 2.5rem;
-    padding: 0 0 2vh 0;
+    margin: 0 1rem 0 0;
+    padding: 0 0 2rem 0;
     scroll-snap-align: start;
     scroll-behavior: smooth;
     @media @desktop {
@@ -39,12 +38,10 @@
 
 .slider {
   @media @desktop {
-    display: flex;
-    justify-content: space-between;
+    .flex(@justifyContent: space-between);
   }
   .main-slider {
-    display: flex;
-    flex-direction: row;
+    .flex();
     overflow: -moz-scrollbars-none;
     -ms-overflow-style: none;
     overflow-y: hidden;
@@ -62,7 +59,7 @@
       position: relative;
       display: inline-block;
       flex: 0 0 85%;
-      margin-right: 4rem;
+      margin-right: 2rem;
       scroll-snap-align: center;
       scroll-behavior: smooth;
       @media @desktop {
@@ -93,8 +90,7 @@
   }
 
   .mini-slider {
-    display: flex;
-    flex-direction: row;
+    .flex();
     overflow: -moz-scrollbars-none;
     -ms-overflow-style: none;
     overflow-y: hidden;
@@ -109,7 +105,7 @@
     }
     .item {
       flex: 0 0 40%;
-      margin-right: 3rem;
+      margin: 0 1rem 0 0;
       padding: 0 0 2rem 0;
       scroll-snap-align: start;
       scroll-behavior: smooth;

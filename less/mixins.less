@@ -4,3 +4,26 @@
   justify-content: @justifyContent;
   align-items: @alignItems;
 }
+
+.phone-slider-news() {
+  .flex();
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  height: 100%;
+  padding: 1rem 0 3rem 0;
+  border-top: 5px solid @main;
+  &::-webkit-scrollbar {
+    width: 0 !important;
+  }
+}
+
+.phone-slider-news-item() {
+  .flex();
+  flex: 0 0 80%;
+  margin: 0 1rem 0 0;
+  scroll-snap-align: center;
+  scroll-behavior: smooth;
+}
