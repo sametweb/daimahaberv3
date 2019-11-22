@@ -356,6 +356,7 @@ footer .link-block .link:hover {
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
+    margin: 0 0 3rem 0;
   }
 }
 .slider .main-slider {
@@ -369,7 +370,6 @@ footer .link-block .link:hover {
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: x mandatory;
   height: 100%;
-  padding: 0 0 3rem 0;
 }
 @media (min-width: 768px) {
   .slider .main-slider {
@@ -423,7 +423,6 @@ footer .link-block .link:hover {
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: x mandatory;
-  height: 100%;
 }
 @media (min-width: 768px) {
   .slider .mini-slider {
@@ -439,6 +438,9 @@ footer .link-block .link:hover {
   padding: 0 0 2rem 0;
   scroll-snap-align: start;
   scroll-behavior: smooth;
+  background-color: #f1f1f2;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 @media (min-width: 768px) {
   .slider .mini-slider .item {
@@ -448,8 +450,15 @@ footer .link-block .link:hover {
 }
 @media (min-width: 500px) {
   .slider .mini-slider .item .link h3 {
+    font-weight: bold;
     font-size: 2rem;
+    padding: 5px 1rem 10px 1rem;
   }
+}
+.slider .mini-slider .item .link p {
+  font-size: 1.5rem;
+  line-height: 1.9rem;
+  padding: 0 1rem;
 }
 .slider .mini-slider .item img {
   width: 100%;

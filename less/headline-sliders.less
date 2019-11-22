@@ -103,6 +103,7 @@
 .slider {
   @media @desktop {
     .flex(@justifyContent: space-between);
+    margin: 0 0 3rem 0;
   }
   .main-slider {
     .flex();
@@ -112,7 +113,6 @@
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
     height: 100%;
-    padding: 0 0 3rem 0;
     @media @desktop {
       width: 60%;
     }
@@ -162,7 +162,6 @@
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
-    height: 100%;
     @media @desktop {
       width: 38%;
     }
@@ -175,6 +174,9 @@
       padding: 0 0 2rem 0;
       scroll-snap-align: start;
       scroll-behavior: smooth;
+      background-color: #f1f1f2;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
       @media @desktop {
         flex: 0 0 100%;
         margin: 0 1rem 0 0;
@@ -182,8 +184,15 @@
       .link {
         h3 {
           @media @tablet {
+            font-weight: bold;
             font-size: 2rem;
+            padding: 5px 1rem 10px 1rem;
           }
+        }
+        p {
+          font-size: 1.5rem;
+          line-height: 1.9rem;
+          padding: 0 1rem;
         }
       }
       img {
