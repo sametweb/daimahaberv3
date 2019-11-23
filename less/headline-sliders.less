@@ -1,67 +1,3 @@
-// @keyframes scroller {
-//   0%,
-//   100% {
-//     transform: translateX(0);
-//   }
-//   9% {
-//     transform: translateX(0);
-//   }
-//   10% {
-//     transform: translateX(-100%);
-//   }
-//   19% {
-//     transform: translateX(-100%);
-//   }
-//   20% {
-//     transform: translateX(-200%);
-//   }
-//   29% {
-//     transform: translateX(-200%);
-//   }
-//   30% {
-//     transform: translateX(-300%);
-//   }
-//   39% {
-//     transform: translateX(-300%);
-//   }
-//   40% {
-//     transform: translateX(-400%);
-//   }
-//   49% {
-//     transform: translateX(-400%);
-//   }
-//   50% {
-//     transform: translateX(-500%);
-//   }
-//   59% {
-//     transform: translateX(-500%);
-//   }
-//   60% {
-//     transform: translateX(-600%);
-//   }
-//   69% {
-//     transform: translateX(-600%);
-//   }
-//   70% {
-//     transform: translateX(-700%);
-//   }
-//   79% {
-//     transform: translateX(-700%);
-//   }
-//   80% {
-//     transform: translateX(-800%);
-//   }
-//   89% {
-//     transform: translateX(-800%);
-//   }
-//   90% {
-//     transform: translateX(-900%);
-//   }
-//   99% {
-//     transform: translateX(-900%);
-//   }
-// }
-
 .headline {
   .flex();
   overflow: -moz-scrollbars-none;
@@ -86,15 +22,17 @@
       flex: 0 0 19%;
       margin: 0;
     }
-    img {
-      width: 100%;
-    }
-    h3 {
-      font-size: 1.7rem;
-      font-weight: normal;
-      line-height: 2rem;
-      @media @tablet {
-        font-size: 2rem;
+    .link {
+      img {
+        width: 100%;
+      }
+      h3 {
+        font-size: 1.6rem;
+        font-weight: normal;
+        line-height: 2rem;
+        @media @tablet {
+          font-size: 1.7rem;
+        }
       }
     }
   }
@@ -126,7 +64,6 @@
       margin: 0 2rem 0 0;
       scroll-snap-align: center;
       scroll-behavior: smooth;
-      // animation: scroller 50s infinite;
 
       @media @desktop {
         flex: 0 0 100%;
@@ -171,7 +108,6 @@
     .item {
       flex: 0 0 40%;
       margin: 0 1rem 0 0;
-      padding: 0 0 2rem 0;
       scroll-snap-align: start;
       scroll-behavior: smooth;
       background-color: #f1f1f2;
@@ -182,16 +118,26 @@
         margin: 0 1rem 0 0;
       }
       .link {
+        display: block;
+        padding: 0 0 1rem 0;
         h3 {
+          font-size: 1.6rem;
+          line-height: 1.9rem;
+          font-weight: bold;
+          padding: 0.5rem 1rem;
           @media @tablet {
             font-weight: bold;
+            font-size: 1.7rem;
+            padding: 0.3rem 1rem;
+          }
+          @media @lg-desktop {
             font-size: 2rem;
-            padding: 5px 1rem 10px 1rem;
+            padding: 0.7rem 1rem;
           }
         }
         p {
-          font-size: 1.5rem;
-          line-height: 1.9rem;
+          font-size: 1.4rem;
+          line-height: 1.7rem;
           padding: 0 1rem;
         }
       }

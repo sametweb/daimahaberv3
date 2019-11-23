@@ -127,7 +127,7 @@ table {
 }
 html {
   font-size: 62.5%;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Helvetica";
   -webkit-font-smoothing: antialiased;
 }
 body {
@@ -139,7 +139,7 @@ h3,
 h4,
 h5,
 s h6 {
-  font-family: "Open Sans Condensed", sans-serif;
+  font-family: "Helvetica";
   font-weight: normal;
 }
 a {
@@ -147,7 +147,7 @@ a {
   color: #000;
 }
 #root {
-  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   font-size: 1.6rem;
   padding: 8px;
@@ -337,17 +337,17 @@ footer .link-block .link:hover {
     margin: 0;
   }
 }
-.headline .item img {
+.headline .item .link img {
   width: 100%;
 }
-.headline .item h3 {
-  font-size: 1.7rem;
+.headline .item .link h3 {
+  font-size: 1.6rem;
   font-weight: normal;
   line-height: 2rem;
 }
 @media (min-width: 500px) {
-  .headline .item h3 {
-    font-size: 2rem;
+  .headline .item .link h3 {
+    font-size: 1.7rem;
   }
 }
 @media (min-width: 768px) {
@@ -435,7 +435,6 @@ footer .link-block .link:hover {
 .slider .mini-slider .item {
   flex: 0 0 40%;
   margin: 0 1rem 0 0;
-  padding: 0 0 2rem 0;
   scroll-snap-align: start;
   scroll-behavior: smooth;
   background-color: #f1f1f2;
@@ -448,16 +447,32 @@ footer .link-block .link:hover {
     margin: 0 1rem 0 0;
   }
 }
+.slider .mini-slider .item .link {
+  display: block;
+  padding: 0 0 1rem 0;
+}
+.slider .mini-slider .item .link h3 {
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+}
 @media (min-width: 500px) {
   .slider .mini-slider .item .link h3 {
     font-weight: bold;
+    font-size: 1.7rem;
+    padding: 0.3rem 1rem;
+  }
+}
+@media (min-width: 900px) {
+  .slider .mini-slider .item .link h3 {
     font-size: 2rem;
-    padding: 5px 1rem 10px 1rem;
+    padding: 0.7rem 1rem;
   }
 }
 .slider .mini-slider .item .link p {
-  font-size: 1.5rem;
-  line-height: 1.9rem;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
   padding: 0 1rem;
 }
 .slider .mini-slider .item img {
