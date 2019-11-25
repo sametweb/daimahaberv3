@@ -41,8 +41,8 @@
 .slider {
   @media @desktop {
     .flex(@justifyContent: space-between);
-    margin: 0 0 3rem 0;
   }
+
   .main-slider {
     .flex();
     overflow: -moz-scrollbars-none;
@@ -51,6 +51,8 @@
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
     height: 100%;
+    scroll-behavior: smooth;
+
     @media @desktop {
       width: 60%;
     }
@@ -63,7 +65,7 @@
       flex: 0 0 85%;
       margin: 0 2rem 0 0;
       scroll-snap-align: center;
-      scroll-behavior: smooth;
+      transition: all 0.5s;
 
       @media @desktop {
         flex: 0 0 100%;
@@ -99,6 +101,7 @@
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
     @media @desktop {
       width: 38%;
     }
@@ -110,12 +113,12 @@
       margin: 0 1rem 0 0;
       scroll-snap-align: start;
       scroll-behavior: smooth;
-      background-color: #f1f1f2;
-      border-bottom-left-radius: 8px;
-      border-bottom-right-radius: 8px;
+      background-color: #eee;
+      transition: all 0.5;
       @media @desktop {
         flex: 0 0 100%;
-        margin: 0 1rem 0 0;
+        margin: 0;
+        position: relative;
       }
       .link {
         display: block;
@@ -143,6 +146,64 @@
       }
       img {
         width: 100%;
+      }
+    }
+  }
+}
+
+.slider-navigation {
+  display: none;
+  @media @desktop {
+    .flex(@justifyContent: space-between);
+    position: relative;
+    margin: 0 0 5rem 0;
+  }
+  .main {
+    @media @desktop {
+      .flex(@justifyContent:space-around);
+      position: absolute;
+      top: -17px;
+      left: 0;
+      width: 60%;
+      height: 3rem;
+      a {
+        width: 100%;
+        display: block;
+        text-align: center;
+        background: #eee;
+        line-height: 3rem;
+        border-right: 1px solid #ddd;
+        &:last-child {
+          border: 0;
+        }
+        &:hover {
+          background: white;
+        }
+      }
+    }
+  }
+  .mini {
+    @media @desktop {
+      .flex(@justifyContent:space-around);
+      position: absolute;
+      top: -17px;
+      right: 0;
+      width: 38%;
+      height: 3rem;
+      a {
+        width: 100%;
+        display: block;
+        text-align: center;
+        background: #eee;
+        line-height: 3rem;
+        border-right: 1px solid #ddd;
+        border-top: 1px solid #ddd;
+        &:last-child {
+          border-right: 0;
+        }
+        &:hover {
+          background: white;
+        }
       }
     }
   }

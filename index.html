@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/index.css" />
     <title>Daimahaber v3.0</title>
+    <script>
+      function slide(e, slider) {
+        e.preventDefault();
+        var mySlider = document.querySelector(`.${slider}-slider`);
+        mySlider.scrollLeft =
+          mySlider.clientWidth * (parseInt(e.target.textContent) - 1);
+      }
+    </script>
   </head>
   <body>
     <div id="root">
@@ -122,61 +130,61 @@
       </section>
       <section class="slider">
         <div class="main-slider">
-          <div class="item">
+          <div class="item" id="main-1">
             <a href="#" class="link">
               <img src="images/haber1.jpg" />
               <h3>Haber Basligi</h3>
             </a>
           </div>
-          <div class="item">
+          <div class="item" id="main-2">
             <a href="#" class="link">
               <img src="images/haber2.jpg" />
               <h3>Haber Basligi</h3>
             </a>
           </div>
-          <div class="item">
+          <div class="item" id="main-3">
             <a href="#" class="link">
               <img src="images/haber3.jpg" />
               <h3>Haber Basligi</h3>
             </a>
           </div>
-          <div class="item">
+          <div class="item" id="main-4">
             <a href="#" class="link">
               <img src="images/haber4.jpg" />
               <h3>Haber Basligi</h3>
             </a>
           </div>
-          <div class="item">
+          <div class="item" id="main-5">
             <a href="#" class="link">
               <img src="images/haber5.jpg" />
               <h3>Haber Basligi</h3>
             </a>
           </div>
-          <div class="item">
+          <div class="item" id="main-6">
             <a href="#" class="link">
               <img src="images/haber6.jpg" />
               <h3>Haber Basligi</h3>
             </a>
           </div>
-          <div class="item">
+          <div class="item" id="main-7">
             <a href="#" class="link">
               <img src="images/haber7.jpg" />
               <h3>Haber Basligi</h3>
             </a>
           </div>
-          <div class="item">
+          <div class="item" id="main-8">
             <a href="#" class="link">
               <img src="images/haber8.jpg" />
               <h3>Haber Basligi</h3>
             </a>
           </div>
-          <div class="item">
+          <div class="item" id="main-9">
             <a href="#" class="link">
               <img src="images/haber9.jpg" />
               <h3>Haber Basligi</h3>
             </a>
           </div>
-          <div class="item">
+          <div class="item" id="main-10">
             <a href="#" class="link">
               <img src="images/haber10.jpg" />
               <h3>Haber Basligi</h3>
@@ -185,7 +193,7 @@
         </div>
 
         <div class="mini-slider">
-          <div class="item">
+          <div class="item" id="mini-1">
             <a href="#" alt="" class="link">
               <img src="images/haber1.jpg" />
               <h3>Haber Basligini Kisalttik</h3>
@@ -195,55 +203,55 @@
               </p>
             </a>
           </div>
-          <div class="item">
+          <div class="item" id="mini-2">
             <a href="#" alt="" class="link">
               <img src="images/haber2.jpg" />
               <h3>Haber Basligi</h3>
             </a>
           </div>
-          <div class="item">
+          <div class="item" id="mini-3">
             <a href="#" alt="" class="link">
               <img src="images/haber3.jpg" />
               <h3>Haber Basligi</h3>
             </a>
           </div>
-          <div class="item">
+          <div class="item" id="mini-4">
             <a href="#" alt="" class="link">
               <img src="images/haber4.jpg" />
               <h3>Haber Basligi</h3>
             </a>
           </div>
-          <div class="item">
+          <div class="item" id="mini-5">
             <a href="#" alt="" class="link">
               <img src="images/haber5.jpg" />
               <h3>Haber Basligi</h3>
             </a>
           </div>
-          <div class="item">
+          <div class="item" id="mini-6">
             <a href="#" alt="" class="link">
               <img src="images/haber6.jpg" />
               <h3>Haber Basligi</h3>
             </a>
           </div>
-          <div class="item">
+          <div class="item" id="mini-7">
             <a href="#" alt="" class="link">
               <img src="images/haber7.jpg" />
               <h3>Haber Basligi</h3>
             </a>
           </div>
-          <div class="item">
+          <div class="item" id="mini-8">
             <a href="#" alt="" class="link">
               <img src="images/haber8.jpg" />
               <h3>Haber Basligi</h3>
             </a>
           </div>
-          <div class="item">
+          <div class="item" id="mini-9">
             <a href="#" alt="" class="link">
               <img src="images/haber9.jpg" />
               <h3>Haber Basligi</h3>
             </a>
           </div>
-          <div class="item">
+          <div class="item" id="mini-10">
             <a href="#" alt="" class="link">
               <img src="images/haber10.jpg" />
               <h3>Haber Basligi</h3>
@@ -251,6 +259,32 @@
           </div>
         </div>
       </section>
+      <div class="slider-navigation">
+        <div class="main">
+          <a href="#main-1" onclick="slide(event, 'main')">1</a>
+          <a href="#main-2" onclick="slide(event, 'main')">2</a>
+          <a href="#main-3" onclick="slide(event, 'main')">3</a>
+          <a href="#main-4" onclick="slide(event, 'main')">4</a>
+          <a href="#main-5" onclick="slide(event, 'main')">5</a>
+          <a href="#main-6" onclick="slide(event, 'main')">6</a>
+          <a href="#main-7" onclick="slide(event, 'main')">7</a>
+          <a href="#main-8" onclick="slide(event, 'main')">8</a>
+          <a href="#main-9" onclick="slide(event, 'main')">9</a>
+          <a href="#main-10" onclick="slide(event, 'main')">10</a>
+        </div>
+        <div class="mini">
+          <a href="#mini-1" onclick="slide(event, 'mini')">1</a>
+          <a href="#mini-2" onclick="slide(event, 'mini')">2</a>
+          <a href="#mini-3" onclick="slide(event, 'mini')">3</a>
+          <a href="#mini-4" onclick="slide(event, 'mini')">4</a>
+          <a href="#mini-5" onclick="slide(event, 'mini')">5</a>
+          <a href="#mini-6" onclick="slide(event, 'mini')">6</a>
+          <a href="#mini-7" onclick="slide(event, 'mini')">7</a>
+          <a href="#mini-8" onclick="slide(event, 'mini')">8</a>
+          <a href="#mini-9" onclick="slide(event, 'mini')">9</a>
+          <a href="#mini-10" onclick="slide(event, 'mini')">10</a>
+        </div>
+      </div>
       <section class="news">
         <h2 class="title">Gündem</h2>
         <div class="thumb-news">
