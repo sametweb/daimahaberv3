@@ -608,6 +608,7 @@ footer .link-block .link:hover {
     align-items: stretch;
     position: relative;
     margin: 0 0 5rem 0;
+    font-size: 1.3rem;
   }
 }
 @media (min-width: 768px) {
@@ -626,12 +627,14 @@ footer .link-block .link:hover {
     width: 100%;
     display: block;
     text-align: center;
-    background: #eee;
+    background: #ffffff;
+    background: linear-gradient(180deg, #ffffff 0%, #eeeeee 50%, #dddddd 100%);
     line-height: 3rem;
     border-right: 1px solid #ddd;
+    border-top: 0;
   }
   .slider-navigation .main a:last-child {
-    border: 0;
+    border-right: 0;
   }
   .slider-navigation .main a:hover {
     background: white;
@@ -653,10 +656,11 @@ footer .link-block .link:hover {
     width: 100%;
     display: block;
     text-align: center;
-    background: #eee;
+    background: #ffffff;
+    background: linear-gradient(180deg, #ffffff 0%, #eeeeee 50%, #dddddd 100%);
     line-height: 3rem;
     border-right: 1px solid #ddd;
-    border-top: 1px solid #ddd;
+    border-top: 0;
   }
   .slider-navigation .mini a:last-child {
     border-right: 0;
