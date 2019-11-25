@@ -150,7 +150,7 @@ a {
   max-width: 1200px;
   margin: 0 auto;
   font-size: 1.6rem;
-  padding: 8px;
+  padding: 1rem;
 }
 header .top-bar {
   width: 100%;
@@ -236,7 +236,7 @@ header .logo-block .burger-menu .menu {
   display: none;
   z-index: 100;
   background: rgba(0, 0, 0, 0.95);
-  padding: 20px;
+  padding: 2rem;
   position: absolute;
   right: 0;
   top: 27px;
@@ -271,7 +271,7 @@ header .main-navbar {
     margin: 0 0 1rem 0;
   }
   header .main-navbar .menu li {
-    padding: 15px 0;
+    padding: 1.5rem 0;
   }
   header .main-navbar .menu li a {
     color: #f2f2de;
@@ -406,7 +406,7 @@ footer {
 }
 footer .link-block {
   width: 100%;
-  padding: 10px 0 20px 0;
+  padding: 1rem 0 2rem 0;
 }
 footer .link-block .link {
   color: #f2f2de;
@@ -525,7 +525,7 @@ footer .link-block .link:hover {
   font-size: 2.5rem;
   font-weight: bold;
   line-height: 5rem;
-  padding: 0 0 0 1vw;
+  padding: 0 0 0 1rem;
   width: 100%;
   background: rgba(0, 0, 0, 0.3);
   color: #f2f2de;
@@ -671,10 +671,9 @@ footer .link-block .link:hover {
 }
 .news .title {
   font-size: 3rem;
-  padding: 10px 40px 10px 0;
+  padding: 1rem 4rem 1rem 0;
   color: #222222;
   font-weight: bold;
-  border-top-right-radius: 20px;
   display: inline-block;
 }
 .news .thumb-news {
